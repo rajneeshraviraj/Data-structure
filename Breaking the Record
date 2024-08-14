@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n; 
+
+    if (n == 0) {
+        cout << "0 0" << endl;
+        return 0;
+    }
+
+    vector<int> score(n);
+    for (int i = 0; i < n; i++) {
+        cin >> score[i]; 
+    }
+
+    
+    int maxScore = score[0];
+    int minScore = score[0];
+    int countMax = 0;
+    int countMin = 0;
+
+    
+    for (int i = 1; i < n; i++) {
+        if (score[i] > maxScore) {
+            maxScore = score[i];
+            countMax++;
+        }
+        if (score[i] < minScore) {
+            minScore = score[i];
+            countMin++;
+        }
+    }
+
+    cout << countMax << " " << countMin << endl;
+
+    return 0;
+}
