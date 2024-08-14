@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()  
+{  
+    int s, t, a, b, m, n, d, apple = 0, orange = 0;
+
+    // Enter value of start & end point of Sam's house  
+    cin >> s >> t; 
+
+    // Enter value of apple & orange tree location  
+    cin >> a >> b; 
+
+    // Enter value for number of apples & oranges  
+    cin >> m >> n; 
+
+    // Loop for apples
+    for (int i = 0; i < m; i++)  
+    {  
+        cin >> d;  
+        if ((a + d) >= s && (a + d) <= t)  
+            apple++;  
+    }
+
+    // Loop for oranges
+    for (int j = 0; j < n; j++)  
+    {  
+        cin >> d;  
+        if ((b + d) >= s && (b + d) <= t)  
+            orange++;  
+    }
+
+    // Print the number of apples and oranges that land on the house
+    cout << apple << endl;
+    cout << orange << endl;
+
+    return 0;  
+}
